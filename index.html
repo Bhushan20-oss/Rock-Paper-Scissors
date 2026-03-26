@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="game-title">
+          <h1>ROCK</h1>
+          <h1>PAPER</h1>
+          <h1>SCISSORS</h1>
+        </div>
+        <div class="score-board">
+          <div class="score-card">
+            <p>COMPUTER SCORE</p>
+            <h2 id="pc-score">0</h2>
+          </div>
+          <div class="score-card">
+            <p>YOUR SCORE</p>
+            <h2 id="user-score">0</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div class="game-screen" id="game-screen">
+        <div class="triangle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+        <button class="choice rock" data-choice="rock">
+          <img src="./Assets/icon3.png" class="iconimg" alt="rock"/>
+        </button>
+        <button class="choice paper" data-choice="paper">
+          <img src="./Assets/icon2.png" class="iconimg" alt="paper"/>
+        </button>
+        <button class="choice scissors" data-choice="scissors">
+          <img src="./Assets/icon1.png" class="iconimg" alt="scissors"/>
+        </button>
+      </div>
+
+      <!-- Result Screen -->
+      <div class="result-screen hidden" id="result-screen">
+        <div class="picked-section">
+          <p>YOU PICKED</p>
+          <div class="picked-circle" id="user-picked"></div>
+        </div>
+        <div class="result-text">
+          <h2 id="result-message">YOU WIN</h2>
+          <p id="result-subtext">AGAINST PC</p>
+          <button id="play-again">PLAY AGAIN</button>
+        </div>
+        <div class="picked-section">
+          <p>PC PICKED</p>
+          <div class="picked-circle" id="pc-picked"></div>
+        </div>
+      </div>
+
+      <!-- Hurray Screen -->
+      <div class="hurray-screen hidden" id="hurray-screen">
+        <div class="stars-container" id="stars-container"></div>
+        <div class="trophy"><img src="./Assets/Vector.png"></div>
+        <h1>HURRAY!!</h1>
+        <p>YOU WON THE GAME</p>
+        <button id="hurray-play-again">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <!-- Rules Button -->
+    <button class="rules-btn" id="rules-btn">RULES</button>
+
+    <!-- Next Button (shown on win) -->
+    <button class="next-btn hidden" id="next-btn">NEXT</button>
+
+    <!-- Rules Popup -->
+    <div class="rules-popup hidden" id="rules-popup">
+      <div class="rules-content">
+        <h3>Game Rules</h3>
+        <ul>
+          <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+          <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper, scissors."</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>If both players lay down the same hand, each player lays down another hand.</li>
+        </ul>
+        <button id="close-rules">✕</button>
+      </div>
+    </div>
+
+    <script src="./JS/Storage.js"></script>
+    <script src="./JS/Game.js"></script>
+    <script src="./JS//Ui.js"></script>
+  </body>
+</html>
